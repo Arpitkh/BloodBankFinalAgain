@@ -1,3 +1,4 @@
+/*Adapter for the Start Screen (Landing Page) Slider Adapter*/
 package com.billy.bloodbank;
 
 import android.content.Context;

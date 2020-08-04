@@ -1,13 +1,11 @@
+/*Java file for the Form Filling Process*/
 package com.billy.bloodbank;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
-import android.os.Handler;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
@@ -31,9 +29,10 @@ public class Application_Form extends AppCompatActivity {
         private Button submit,fillBloodRequest;
         private RadioGroup radiosexGroup,radiobloodtype,radiobloodgroup,timegroup;
         private RadioButton radioSexButton,radiobtype,radiobgroup, radiotime;
+        AlertDialog.Builder builder;
 
 
-        DatabaseReference databasePatient;
+    DatabaseReference databasePatient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,10 +59,29 @@ public class Application_Form extends AppCompatActivity {
         submit = findViewById(R.id.submit);
         fillBloodRequest = findViewById(R.id.getformButton);
 
+        builder = new AlertDialog.Builder(this);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addinfo();
+                builder.setMessage("Are you sure you want to submit the form?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                addinfo();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+
+                            }
+                        });
+
+                AlertDialog alert = builder.create();
+
+                alert.setTitle("Confirm Form Submission");
+                alert.show();
+
             }
         });
         }
@@ -73,7 +91,7 @@ public class Application_Form extends AppCompatActivity {
         return TextUtils.isEmpty(str);
     }
 
-        public void addinfo(){
+        public void addinfo(){                  //Makes an entry in the Realtime Database
 
         boolean isValid  = true;
 
@@ -177,6 +195,11 @@ public class Application_Form extends AppCompatActivity {
                 Patient patient =  new Patient(ID,Pname,Rname,Gender,Age,Weight,Hname,Incharge,RegNo,Ward,Bed,BloodGroup,BloodType, Time, UnitCount,ts);
                 databasePatient.child(Time).child(ID).setValue(patient);
                 Toast.makeText(Application_Form.this,"Request Submitted",Toast.LENGTH_SHORT).show();
+                Intent intent22 = new Intent(Application_Form.this, informationScreen.class);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                startActivity(intent22);
+
+
 
             }
 

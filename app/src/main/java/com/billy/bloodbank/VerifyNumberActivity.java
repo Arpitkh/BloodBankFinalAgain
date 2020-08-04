@@ -1,3 +1,4 @@
+/*Java file for the otp entry screen*/
 package com.billy.bloodbank;
 
 import android.content.Intent;

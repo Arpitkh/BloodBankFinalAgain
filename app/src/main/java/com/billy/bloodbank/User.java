@@ -1,4 +1,4 @@
-
+/*Java File containing the user class*/
 package com.billy.bloodbank;
 
 import com.google.gson.annotations.Expose;

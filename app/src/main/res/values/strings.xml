@@ -12,7 +12,6 @@
     <string name="blood_availability">CHECK BLOOD AVAILABILITY</string>
     <string name="request">FORM REQUEST</string>
     <string name="title_activity_application__form">Application_Form</string>
-    <string name="heading">Please read the Instructions Carefully</string>
 
     <string name="first">1.  5 ml patient’s blood in plain sterile test tube (12x100 mm), with stopper and properly labeled.
 </string>
@@ -32,24 +31,5 @@ service charge and there will be no charge for the blood or its components.</str
     <string name="eleven">11.  Follow up condition of the patient after the transfusion should be informed to IRCS.</string>
 
     <string name="accept">PROCEED</string>
-    <string name="hname">Hospital\'s Name</string>
-    <string name="name">Patient\'s Name</string>
-    <string name="rname">Father\'s/Husband\'s Name</string>
-    <string name="age">Age</string>
-    <string name="gender">Gender</string>
-    <string name="ward">Ward/Bed No.</string>
-    <string name="incharge">Doctor Incharge</string>
-    <string name="title_activity_applicationform">applicationform</string>
-
-    <array name="bgroup">
-        <item>A+</item>
-        <item>A-</item>
-        <item>B+</item>
-        <item>B-</item>
-        <item>O+</item>
-        <item>O-</item>
-        <item>AB+</item>
-        <item>AB-</item>
-    </array>
 
 </resources>

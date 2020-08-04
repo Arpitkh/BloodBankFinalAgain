@@ -1,4 +1,4 @@
-
+/*Java file specifying the Blood Class*/
 package com.billy.bloodbank;
 
 import com.google.gson.annotations.Expose;

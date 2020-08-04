@@ -1,3 +1,4 @@
+/*Java File for the Landing Page*/
 package com.billy.bloodbank;
 
 import android.content.Intent;

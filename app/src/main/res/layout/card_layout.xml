@@ -70,7 +70,7 @@
                         android:padding="1dp"
                         android:textAlignment="center"
                         android:text="670"
-                        android:textSize="40sp"
+                        android:textSize="30sp"
                         android:textStyle="normal" />
 
 

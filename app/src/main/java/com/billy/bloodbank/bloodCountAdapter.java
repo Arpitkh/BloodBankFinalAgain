@@ -1,3 +1,4 @@
+/*Recycler View Adapter for the blood unit count as well as the form requests count*/
 package com.billy.bloodbank;
 
 import android.content.Context;

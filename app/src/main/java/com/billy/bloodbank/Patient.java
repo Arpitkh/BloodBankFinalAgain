@@ -1,3 +1,4 @@
+/*Java File containing the Patient class(Called on form submission)*/
 package com.billy.bloodbank;
 
 public class Patient {
@@ -11,8 +12,8 @@ public class Patient {
     String Hospital;
     String DoctorIncharge;
     int RegistrationNo;
-    String Ward;
-    String BedNo;
+    String PatientWard;
+    String PatientBedNo;
     String RequiredBloodGroup;
     String RequiredBloodType;
     int UnitRequired;
@@ -33,8 +34,8 @@ public class Patient {
         Hospital = hospital;
         DoctorIncharge = doctorIncharge;
         RegistrationNo = registrationNo;
-        Ward = ward;
-        BedNo = bedNo;
+        PatientWard = ward;
+        PatientBedNo = bedNo;
         RequiredBloodGroup = requiredBloodGroup;
         RequiredBloodType = requiredBloodType;
         time = timer;
@@ -79,12 +80,12 @@ public class Patient {
         return RegistrationNo;
     }
 
-    public String getWard() {
-        return Ward;
+    public String getPatientWardWard() {
+        return PatientWard;
     }
 
-    public String getBedNo() {
-        return BedNo;
+    public String getPatientWardBedNo() {
+        return PatientBedNo;
     }
 
     public String getRequiredBloodGroup() {

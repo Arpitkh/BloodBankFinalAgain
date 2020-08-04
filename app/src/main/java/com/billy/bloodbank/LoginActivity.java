@@ -1,3 +1,4 @@
+/*Java File for the authentication screen on which the user is asked his/her Phone Number*/
 package com.billy.bloodbank;
 
 import android.content.Intent;

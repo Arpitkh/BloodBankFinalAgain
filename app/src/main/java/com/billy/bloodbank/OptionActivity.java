@@ -1,7 +1,7 @@
+/*Java File for the home screen*/
 package com.billy.bloodbank;
 
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,7 +26,7 @@ public class OptionActivity extends AppCompatActivity {
 
     public final String TAG = "ola";
 
-    private static final String URL = "https://api.myjson.com/bins/e7ozx";
+    private static final String URL = "https://api.myjson.com/bins/e7ozx";             //JSON file link for the Last and Next donation date.
 
     FirebaseAuth mAuth;
     TextView Username;
@@ -69,7 +69,7 @@ public class OptionActivity extends AppCompatActivity {
         });
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        queue.add(request);
+        queue.add(request);     //fetches the next an
     }
 
     public void toactTwo(View view){
